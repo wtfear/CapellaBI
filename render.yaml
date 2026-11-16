@@ -1,11 +1,11 @@
 services:
   - type: web
-    name: nexusbi
-    runtime: image
-    image:
-      url: evidencedev/serve:latest
+    name: nexus-bi
+    env: docker
+    dockerfilePath: Dockerfile
     plan: free
-    region: oregon
     envVars:
+      - key: EVIDENCE_AUTH_DISABLED
+        value: "true"
       - key: PORT
-        value: 3000
+        value: "3000"

@@ -1,0 +1,9 @@
+# Direct connector configuration for self-hosted Evidence serve
+name: nexus_analytics
+type: postgres
+host: 127.0.0.1
+port: 5432
+user: postgres
+password: password
+database: analytics
+sslmode: disable
