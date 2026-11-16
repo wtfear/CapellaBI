@@ -1,0 +1,11 @@
+{
+  "name": "nexus-bi",
+  "version": "1.0.0",
+  "description": "NexusBI: Executive Business Intelligence & Unit Economics Cockpit",
+  "author": "wtfear",
+  "scripts": {
+    "build": "echo 'NexusBI built for container & Vercel deployment'",
+    "dev": "echo 'Run via Docker or Evidence CLI: evidence dev'"
+  },
+  "type": "module"
+}

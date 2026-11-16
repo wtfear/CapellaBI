@@ -1,0 +1,26 @@
+name: NexusBI CI/CD
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate-structure:
+    name: Validate Project Files
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Verify Config & Pages
+        run: |
+          test -f evidence.config.yaml || exit 1
+          test -f pages/home.md || exit 1
+          echo "NexusBI structure validated successfully."

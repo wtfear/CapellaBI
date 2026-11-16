@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: nexusbi
+    runtime: image
+    image:
+      url: evidencedev/serve:latest
+    plan: free
+    region: oregon
+    envVars:
+      - key: PORT
+        value: 3000
