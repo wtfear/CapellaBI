@@ -1,4 +1,4 @@
-name: NexusBI CI/CD
+name: CapellaBI CI/CD
 
 on:
   push:
@@ -23,4 +23,5 @@ jobs:
         run: |
           test -f evidence.config.yaml || exit 1
           test -f pages/home.md || exit 1
-          echo "NexusBI structure validated successfully."
+          test -f public/capella-logo.svg || exit 1
+          echo "CapellaBI structure validated successfully."

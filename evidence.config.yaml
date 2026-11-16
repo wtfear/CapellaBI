@@ -1,5 +1,5 @@
 project:
-  name: NexusBI Executive Intelligence
+  name: CapellaBI Executive Intelligence
   evidence: "0.9.1"
 
 pages: ./pages

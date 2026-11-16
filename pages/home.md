@@ -1,5 +1,5 @@
 ---
-title: NexusBI — Executive Revenue & AI Unit Economics Cockpit
+title: CapellaBI — Executive Revenue & AI Unit Economics Cockpit
 subtitle: Real-time telemetry, margin analytics, and autonomous agent unit economics for WTFear Agency
 layout: full
 ---
@@ -28,24 +28,24 @@ select
 ## 📈 Monthly Revenue & Product Growth
 
 ```monthly_revenue
-select '2026-01-01' as month, 82000 as mrr, 68000 as gross_profit, 'NexusIQ (RAG)' as product
-union all select '2026-02-01', 94000, 79000, 'NexusIQ (RAG)'
-union all select '2026-03-01', 108000, 91000, 'NexusIQ (RAG)'
-union all select '2026-04-01', 119000, 101000, 'NexusIQ (RAG)'
-union all select '2026-05-01', 134000, 114000, 'NexusIQ (RAG)'
-union all select '2026-06-01', 148000, 126000, 'NexusIQ (RAG)'
-union all select '2026-01-01', 45000, 39000, 'NexusVoice'
-union all select '2026-02-01', 58000, 50000, 'NexusVoice'
-union all select '2026-03-01', 72000, 62000, 'NexusVoice'
-union all select '2026-04-01', 89000, 77000, 'NexusVoice'
-union all select '2026-05-01', 104000, 90000, 'NexusVoice'
-union all select '2026-06-01', 122000, 105000, 'NexusVoice'
-union all select '2026-01-01', 22000, 19000, 'NexusPersona'
-union all select '2026-02-01', 31000, 27000, 'NexusPersona'
-union all select '2026-03-01', 43000, 38000, 'NexusPersona'
-union all select '2026-04-01', 55000, 48000, 'NexusPersona'
-union all select '2026-05-01', 67000, 58000, 'NexusPersona'
-union all select '2026-06-01', 81000, 71000, 'NexusPersona'
+select '2026-01-01' as month, 82000 as mrr, 68000 as gross_profit, 'SiriusIQ (RAG)' as product
+union all select '2026-02-01', 94000, 79000, 'SiriusIQ (RAG)'
+union all select '2026-03-01', 108000, 91000, 'SiriusIQ (RAG)'
+union all select '2026-04-01', 119000, 101000, 'SiriusIQ (RAG)'
+union all select '2026-05-01', 134000, 114000, 'SiriusIQ (RAG)'
+union all select '2026-06-01', 148000, 126000, 'SiriusIQ (RAG)'
+union all select '2026-01-01', 45000, 39000, 'PolarisERP'
+union all select '2026-02-01', 58000, 50000, 'PolarisERP'
+union all select '2026-03-01', 72000, 62000, 'PolarisERP'
+union all select '2026-04-01', 89000, 77000, 'PolarisERP'
+union all select '2026-05-01', 104000, 90000, 'PolarisERP'
+union all select '2026-06-01', 122000, 105000, 'PolarisERP'
+union all select '2026-01-01', 22000, 19000, 'AltairCommerce'
+union all select '2026-02-01', 31000, 27000, 'AltairCommerce'
+union all select '2026-03-01', 43000, 38000, 'AltairCommerce'
+union all select '2026-04-01', 55000, 48000, 'AltairCommerce'
+union all select '2026-05-01', 67000, 58000, 'AltairCommerce'
+union all select '2026-06-01', 81000, 71000, 'AltairCommerce'
 ```
 
 {% bar_chart 
@@ -76,12 +76,12 @@ union all select 'Cartesia Sonic (TTS)' as model, 110, 99.92, 4.20
 ## 🏢 Enterprise Retainers & Client Engagements
 
 ```client_engagements
-select 'Acme Corp' as client, 'Enterprise Retainer' as tier, '$12,500' as monthly_retainer, 'NexusIQ + Voice' as deployment, 'Active' as status
-union all select 'Horizon Logistics', 'Scale Tier', '$8,500', 'NexusAudit + Workflows', 'Active'
-union all select 'Apex Financial', 'Enterprise Retainer', '$15,000', 'NexusIQ Dedicated', 'Active'
-union all select 'Starlight Health', 'Growth Tier', '$6,000', 'NexusPersona Suite', 'Active'
-union all select 'Vanguard Retail', 'Enterprise Retainer', '$18,000', 'Full Autonomous Suite', 'Active'
-union all select 'Beacon Solar', 'Growth Tier', '$5,500', 'NexusAudit Engine', 'Active'
+select 'Acme Corp' as client, 'Enterprise Retainer' as tier, '$12,500' as monthly_retainer, 'SiriusIQ + PolarisERP' as deployment, 'Active' as status
+union all select 'Horizon Logistics', 'Scale Tier', '$8,500', 'PolarisERP + WMS Workflows', 'Active'
+union all select 'Apex Financial', 'Enterprise Retainer', '$15,000', 'SiriusIQ Dedicated VPC', 'Active'
+union all select 'Starlight Health', 'Growth Tier', '$6,000', 'VegaDocs Air-Gapped', 'Active'
+union all select 'Vanguard Retail', 'Enterprise Retainer', '$18,000', 'AltairCommerce Marketplace', 'Active'
+union all select 'Beacon Solar', 'Growth Tier', '$5,500', 'AldebaranCRM Sales Engine', 'Active'
 ```
 
 {% table data="client_engagements" title="Active Client Portfolio & Retainer Distribution" /%}
@@ -89,5 +89,5 @@ union all select 'Beacon Solar', 'Growth Tier', '$5,500', 'NexusAudit Engine', '
 ---
 
 <p class="text-sm text-gray-500 mt-12 text-center">
-  NexusBI &bull; Developed by <a href="https://github.com/wtfear" class="underline">WTFear Agency</a> &bull; Powered by Evidence BI-as-Code & DuckDB-WASM
+  CapellaBI &bull; Developed by <a href="https://github.com/wtfear" class="underline">WTFear Agency</a> &bull; Powered by Evidence BI-as-Code & DuckDB-WASM
 </p>
