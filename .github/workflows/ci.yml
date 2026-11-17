@@ -12,16 +12,27 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  validate-structure:
-    name: Validate Project Files
+  validate-and-build:
+    name: Validate Project Files & Build Static Distribution
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
       - name: Verify Config & Pages
         run: |
           test -f evidence.config.yaml || exit 1
           test -f pages/home.md || exit 1
+          test -f pages/index.md || exit 1
           test -f public/capella-logo.svg || exit 1
-          echo "CapellaBI structure validated successfully."
+
+      - name: Build Static Distribution
+        run: |
+          npm run build
+          test -f dist/index.html || exit 1
+          echo "CapellaBI static distribution and pages built successfully."

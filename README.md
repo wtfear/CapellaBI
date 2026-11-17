@@ -3,7 +3,7 @@
 </p>
 
 <h1 align="center">CapellaBI</h1>
-<h3 align="center">Executive Intelligence & AI Unit Economics Cockpit</h3>
+<h3 align="center">Executive Revenue & AI Unit Economics Cockpit</h3>
 
 <p align="center">
   <strong>The Golden Star of High-Precision Business Intelligence & Telemetry</strong><br />
@@ -15,7 +15,7 @@
   <a href="https://evidence.dev"><img src="https://img.shields.io/badge/Evidence-BI--as--Code-blue.svg?style=flat-square" alt="Evidence" /></a>
   <a href="https://duckdb.org"><img src="https://img.shields.io/badge/Engine-DuckDB--WASM-yellow.svg?style=flat-square" alt="DuckDB" /></a>
   <a href="./LICENSE"><img src="https://img.shields.io/badge/License-MIT-purple.svg?style=flat-square" alt="MIT License" /></a>
-  <a href="https://vercel.com"><img src="https://img.shields.io/badge/Deploy-Vercel%20%7C%20Render-black.svg?style=flat-square" alt="Hosting" /></a>
+  <a href="https://vercel.com"><img src="https://img.shields.io/badge/Deploy-Vercel%20%7C%20Cloudflare%20%7C%20Render-black.svg?style=flat-square" alt="Hosting" /></a>
 </p>
 
 ---
@@ -24,17 +24,17 @@
 
 **CapellaBI** (named after Alpha Aurigae, the brilliant golden quadruple star system) is an enterprise-grade Business Intelligence platform built on the modern **BI-as-Code** paradigm. 
 
-Instead of paying \$50+/user/month for rigid legacy tools like Tableau, Looker, or PowerBI, CapellaBI compiles SQL queries and Markdown components into an interactive, ultra-fast analytics portal that executes in-browser using **DuckDB-WASM** with zero database latency.
+Instead of paying $50+/user/month for rigid legacy tools like Tableau, Looker, or PowerBI, CapellaBI compiles SQL queries and Markdown components into an interactive, ultra-fast analytics portal that executes in-browser using **DuckDB-WASM** with zero database latency.
 
 ---
 
 ## ✨ Key Capabilities
 
 - **Sub-50ms In-Browser Analytics:** Powered by DuckDB-WASM, allowing instant multi-dimensional slicing, sorting, and filtering with zero server round-trips.
-- **Executive Revenue Telemetry:** Real-time ARR tracking, blended gross margin breakdown, and AI turn latency distributions.
-- **Autonomous Agent Economics:** Granular cost telemetry comparing Groq Llama-3.3, Google Gemini Flash, and real-time voice streams.
+- **Executive Revenue Telemetry:** Real-time ARR tracking ($1.48M ARR, +42.8% YoY), blended gross margin breakdown (84.6%), and AI turn latency distributions.
+- **Autonomous Agent Economics:** Granular cost telemetry comparing Groq Llama-3.3, Google Gemini Flash, Deepgram Nova-2, and Cartesia Sonic voice streams.
 - **Enterprise Client Ledger:** Track enterprise contract retainers, active tiers, and MRR contributions across client deployments.
-- **Cloud & Container Deployments:** Pre-configured for zero-cost deployment on Vercel or Render free web service.
+- **Zero-Cost Free Deployments:** Pre-configured for $0/month deployment on Vercel, Cloudflare Pages, Netlify, or Render.
 
 ---
 
@@ -48,28 +48,58 @@ graph TD
     Components --> Cockpit[Executive Web Dashboard]
 ```
 
-- **Framework:** Evidence.dev 0.12 (BI-as-Code)
-- **Engine:** DuckDB-WASM / PostgreSQL direct connector
-- **Components:** Markdoc Data Visualizations (`{% bar_chart %}`, `{% big_value %}`, `{% table %}`)
-- **Hosting:** Vercel (Container Functions) or Render Free Web Service
+- **Framework:** Evidence.dev 0.12 (BI-as-Code) + Static Edge Bundle
+- **Engine:** DuckDB-WASM / In-Browser Universal SQL
+- **Components:** Interactive Canvas/SVG Visualizations, Responsive Tailwind UI, In-Browser SQL Console
+- **Hosting:** Vercel (Edge CDN), Cloudflare Pages, Netlify, or Render Free Container
 
 ---
 
-## 🚀 Deployment Guide
+## 🚀 Deployment Guide (100% Free Tiers)
 
-### Option A: 1-Click Deploy to Vercel
-1. Fork or import `wtfear/NexusBI` to [vercel.com/new](https://vercel.com/new).
-2. Vercel automatically detects `Dockerfile.vercel`.
-3. Set Environment Variables:
-   - `EVIDENCE_AUTH_DISABLED`: `true`
-4. Click **Deploy**.
+### Option 1: Vercel (Recommended — $0/mo Forever, Zero Cold Starts)
+1. Fork or import `wtfear/CapellaBI` to [vercel.com/new](https://vercel.com/new).
+2. Configure Project Settings:
+   - **Framework Preset:** `Other` (or `Vite`)
+   - **Build Command:** `npm run build`
+   - **Output Directory:** `dist`
+3. Click **Deploy**.
+4. Your live dashboard is immediately published at `https://capellabi.vercel.app` (or connect your custom domain `bi.wtfear.agency` in Vercel Settings).
 
-### Option B: Deploy to Render Free Web Service ($0/mo)
-1. Go to [dashboard.render.com](https://dashboard.render.com) $\rightarrow$ **New Web Service**.
-2. Connect `wtfear/NexusBI`.
+### Option 2: Cloudflare Pages (Free Forever, Unlimited Bandwidth)
+1. Go to [dash.cloudflare.com](https://dash.cloudflare.com) → **Workers & Pages** → **Create application** → **Pages** → **Connect to Git**.
+2. Select `wtfear/CapellaBI`.
+3. Configure Build Settings:
+   - **Framework preset:** `None`
+   - **Build command:** `npm run build`
+   - **Build output directory:** `dist`
+4. Click **Save and Deploy**.
+
+### Option 3: Render Free Container Web Service ($0/mo)
+1. Go to [dashboard.render.com](https://dashboard.render.com) → **New Web Service**.
+2. Connect `wtfear/CapellaBI`.
 3. Render automatically picks up `render.yaml` or `Dockerfile`.
 4. Instance Type: **Free** (0.5 CPU / 512 MB RAM).
-5. Click **Deploy**.
+5. Environment Variables:
+   - `EVIDENCE_AUTH_DISABLED`: `true`
+   - `PORT`: `3000`
+6. Click **Deploy**.
+
+---
+
+## 💻 Local Development
+
+```bash
+# Clone the repository
+git clone https://github.com/wtfear/CapellaBI.git
+cd CapellaBI
+
+# Build static distribution
+npm run build
+
+# Start local preview server (port 3000)
+npx serve dist -l 3000
+```
 
 ---
 
@@ -85,6 +115,14 @@ CapellaBI anchors the financial analytics tier of the **WTFear Celestial AI Suit
 | 🌟 **Altair** | **`AltairCommerce`** | Headless B2B/D2C Commerce Engine | Laravel 11/12, Vue.js, MySQL |
 | 🌟 **Vega** | **`VegaDocs`** | Air-Gapped Document Intelligence & RAG | React, Node.js, Vector DBs |
 | 🌟 **Sirius** | **`SiriusIQ`** | Enterprise Workplace Knowledge OS & RAG | Next.js, FastAPI, Vespa, PostgreSQL |
+| 🌟 **Castor** | **`CastorChat`** | Omnichannel WhatsApp & Customer Desk | Rails 7.2, Vue 3, PostgreSQL |
+| 🌟 **Arcturus** | **`ArcturusFlow`** | Sovereign AI Agent Automation Engine | TypeScript, Angular, PostgreSQL |
+| 🌟 **Spica** | **`SpicaAnalytics`** | Privacy-First Sovereign Web Telemetry | Next.js 15, Prisma, PostgreSQL |
+| 🌟 **Antares** | **`AntaresERP`** | Enterprise Operations & POS Engine | Laravel 13, FilamentPHP 5, MySQL |
+| 🌟 **Deneb** | **`DenebCMS`** | Native Next.js 15 Headless CMS | Next.js 15, TypeScript, Drizzle |
+| 🌟 **Mintaka** | **`MintakaSchedule`** | Autonomous Scheduling Engine | Next.js, Prisma, tRPC |
+| 🌟 **Bellatrix** | **`BellatrixPortal`** | Enterprise Admin & Client Portal OS | React 19, TypeScript, AntD |
+| 🌟 **Lyra** | **`LyraCore`** | Sovereign Multi-Tenant AI SaaS Foundation | Next.js 15, FastAPI, Redis |
 
 ---
 

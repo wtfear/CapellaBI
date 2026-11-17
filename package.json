@@ -4,8 +4,8 @@
   "description": "CapellaBI: Executive Business Intelligence & Unit Economics Cockpit",
   "author": "wtfear",
   "scripts": {
-    "build": "echo 'CapellaBI built for container & Vercel deployment'",
-    "dev": "echo 'Run via Docker or Evidence CLI: evidence dev'"
+    "build": "node build.js",
+    "dev": "node build.js && npx serve dist -l 3000"
   },
   "type": "module"
 }
