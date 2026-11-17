@@ -16,6 +16,7 @@ if (fs.existsSync(publicDir)) {
   const files = fs.readdirSync(publicDir);
   for (const file of files) {
     fs.copyFileSync(path.join(publicDir, file), path.join(distDir, file));
+    fs.copyFileSync(path.join(publicDir, file), path.join(__dirname, file));
   }
 }
 
@@ -614,5 +615,8 @@ const htmlContent = `<!DOCTYPE html>
 </body>
 </html>`;
 
+// Write to both dist/ and root project folder for foolproof Vercel/Cloudflare/Netlify deployment
 fs.writeFileSync(path.join(distDir, 'index.html'), htmlContent, 'utf8');
-console.log('✅ CapellaBI static distribution successfully built into dist/index.html');
+fs.writeFileSync(path.join(__dirname, 'index.html'), htmlContent, 'utf8');
+
+console.log('✅ CapellaBI static distribution successfully built into dist/index.html AND root index.html');
